@@ -22,7 +22,7 @@ COPY . /home/app
 RUN mvn package -DskipTests
 
 # Expose port 8080 for the container
-EXPOSE 3080
+EXPOSE 3090
 
 # Run the application
 CMD ["java", "-jar", "target/java-maven-app-1.1.0-SNAPSHOT.jar"]
