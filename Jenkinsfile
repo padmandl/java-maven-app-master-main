@@ -48,12 +48,12 @@ pipeline {
                 script {
                     echo "deploying"
                     //def dockerCmd = 'docker run -p 3080:3080 -d padmandl/myrepo:jma-4.0'
-                    def dockerComposeCmd = "docker-compose -f /home/docker-compose.yml up --detach"
+                    def dockerComposeCmd = "docker-compose -f /home/docker-composee.yml up --detach"
                     //def shellCmd = "bash /home/server-cmds.sh"
                     sshagent(['digital-ocean-server']) {
                         //sh "ssh -o StrictHostKeyChecking=no root@143.244.161.134 ${dockerCmd}"
                         //sh "scp server-cmds.sh root@143.244.161.134:/home/"
-                        sh "scp docker-compose.yml root@143.244.161.134:/home/"
+                        sh "scp docker-composee.yml root@143.244.161.134:/home/"
                         sh "ssh -o StrictHostKeyChecking=no root@143.244.161.134 ${dockerComposeCmd}"
                         //sh "ssh -o StrictHostKeyChecking=no root@143.244.161.134 ${shellCmd}"
                     }
