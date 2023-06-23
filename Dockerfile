@@ -4,6 +4,7 @@ FROM openjdk:11-jdk-slim
 RUN mkdir -p /home/app
 # Set the working directory to /app
 WORKDIR /home/app
+#adding extra line
 
 # Install Maven
 RUN apt-get update && \
