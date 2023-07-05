@@ -37,7 +37,7 @@ pipeline {
 //                     withCredentials([usernamePassword(credentialsId: 'DockerHubp', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
 //                            sh 'docker build -t yedukondaluch/image99 :jma-2.0 .'
 //                            sh "echo $PASS | docker login -u $USER --password-stdin"
-//                            sh 'docker push yedukondaluch/image99:jma-1.0'
+//                            sh 'docker push yedukondaluch/image99:jma-2.0'
 //                        }
                     
                     gv.buildImage()
@@ -48,7 +48,7 @@ pipeline {
             steps {
                 script {
                     echo "deploying"
-                    //def dockerCmd = 'docker run -p 3080:3080 -d padmandl/myrepo:jma-4.0'
+                    //def dockerCmd = 'docker run -p 3080:3080 -d yedukondaluch/image99:jma-4.0'
                     def dockerComposeCmd = "docker-compose -f /home/docker-composee.yml up --detach"
                     //def shellCmd = "bash /home/server-cmds.sh"
                     sshagent(['digital-ocean-server']) {
