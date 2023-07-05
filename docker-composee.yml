@@ -1,7 +1,7 @@
 version: '3'
 services:
   java-maven-app:
-    image: padmandl/myrepo:jma-5.0
+    image: yedukondaluch/image99:jma-5.0
     ports:
       - 3080:3080
 #    networks:
