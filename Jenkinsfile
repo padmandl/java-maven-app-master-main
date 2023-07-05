@@ -23,7 +23,8 @@ pipeline {
                     echo "building jar"
                    echo "building the application..."
                     gv.buildJar()
-                     //sh 'mvn package'
+                    //npm,maven,npm--build tools
+                     //sh 'mvn package' -- create jar file
                     //sh "$mvnHome/bin/mvn package"
 
                 }
@@ -34,9 +35,9 @@ pipeline {
                 script {
                     echo "building image"
 //                     withCredentials([usernamePassword(credentialsId: 'DockerHubp', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-//                            sh 'docker build -t padmandl/myrepo:jma-1.0 .'
+//                            sh 'docker build -t yedukondaluch/image99 :jma-2.0 .'
 //                            sh "echo $PASS | docker login -u $USER --password-stdin"
-//                            sh 'docker push padmandl/myrepo:jma-1.0'
+//                            sh 'docker push yedukondaluch/image99:jma-1.0'
 //                        }
                     
                     gv.buildImage()

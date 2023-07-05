@@ -19,6 +19,7 @@ spec:
           image: padmandl/myrepo:jma-5.0
           ports:
             - containerPort: 3080
+
 #          env:
 #            - name: MONGO_INITDB_ROOT_USERNAME
 #              valueFrom:
@@ -42,4 +43,4 @@ spec:
     - protocol: TCP
       port: 3080
       targetPort: 3080
-
+      
